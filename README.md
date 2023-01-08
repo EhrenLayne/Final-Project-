@@ -21,6 +21,8 @@ https://heinonline.org/HOL/P?h=hein.journals/davlr50&i=755
 
 https://www.aclu.org/sites/default/files/assets/100413-mj-report-rfs-rel1.pdf 
 
+https://www.moneygeek.com/living/state-policing-corrections-spending/
+
 Model Binary:
 
 Decriminalized 1, Criminalized 0 
