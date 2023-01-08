@@ -1,5 +1,9 @@
 # R file
-Rates <- read.csv("Crime Statistic - Marijuana Arrests by State .xlsx")
 
-print(head(Rates,n=5))
+install.packages("openxlsx")
+library(openxlsx)
+
+
+read.xlsx("Marijuana_arrests_data.xlsx")
+
 
