@@ -23,4 +23,18 @@ https://heinonline.org/HOL/P?h=hein.journals/davlr50&i=755
 
 https://www.aclu.org/sites/default/files/assets/100413-mj-report-rfs-rel1.pdf 
 
+Model Binary:
 
+Decriminalized 1, Criminalized 0 
+
+Recreational 1, Medicinal 0
+
+Illegal, Yes (1), No (0)
+
+Variables: 
+
+Criminalized/Decriminalized - Status
+
+Recreational/Medicinal - Medicinal
+
+Illegal (Yes, No) - Illegal 
