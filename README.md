@@ -23,13 +23,6 @@ https://www.aclu.org/sites/default/files/assets/100413-mj-report-rfs-rel1.pdf
 
 https://www.moneygeek.com/living/state-policing-corrections-spending/
 
-Model Binary:
-
-Decriminalized 1, Criminalized 0 
-
-Recreational 1, Medicinal 0
-
-Illegal, Yes (1), No (0)
 
 Variables: 
 
