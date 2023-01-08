@@ -46,7 +46,7 @@ Phenomenon we are investigating: The disparity between the incarceration of Blac
 
 Context: Marijuana possession arrests make up the largest portion of total drug arrests in the US. Of those arrested for marijuana possession, Black men make up the largest portion of perpetrators. Though Black people and White people consume marijuana at similar rates, Black peoplpe are punished for marijuana usage at a significantly higher rate than their white counterparts. We'd like to examine and interpret the significant indicators for changes in the rate of incarceration (by state) for marijuana possession arrests amongst Black and White individuals. As marijuana continues to become more popular amongst middle and upper class America, it is important to understand why this shift is occurring, and why there remains a large portion of Black Americans imprisoned on petty marijuana possesssion charges. 
 
-Tasks:
+Tasks: 1/8/23
 
 Will: look for new expenditure data; add data to CVS/XL; try to push 
 
