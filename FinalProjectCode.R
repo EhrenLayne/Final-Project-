@@ -16,3 +16,4 @@ ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +
 
 head(df)
 glimpse(df)
+summary(df)
