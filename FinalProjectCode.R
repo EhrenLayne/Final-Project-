@@ -4,6 +4,6 @@ install.packages("openxlsx")
 library(openxlsx)
 
 
-read.xlsx("Marijuana_arrests_data.xlsx")
+Data <- read.xlsx("Marijuana_arrests_data.xlsx")
 
-
+head(Data)
