@@ -17,3 +17,8 @@ ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +
 head(df)
 glimpse(df)
 summary(df)
+
+df <- read.xlsx("Marijuana_arrests_data.xlsx")
+
+arrests <- lm(inc_rate ~ status + per_black, data=df)
+summary(arrests) 
