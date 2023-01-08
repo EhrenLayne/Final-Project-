@@ -1,8 +1,6 @@
 # Final-Project-
 Final Project group repository 
 
-Research Question: How does the decriminalization of marijuana affect the rate of incarceration in a state?
-
 Data Links: 
 
 Decriminalization status - https://disa.com/maps/marijuana-legality-by-state
@@ -38,3 +36,20 @@ Criminalized/Decriminalized - Status
 Recreational/Medicinal - Medicinal
 
 Illegal (Yes, No) - Illegal 
+
+Per_black - % of a states population that is Black 
+
+**Income levels - Average income for Black households in each state 
+
+**State expenditure attributable to marijuana prohabition
+
+Question: What are the factors that perpetuate the incarceration of Black men on marijuana possession charges?
+
+Purpose: To examine the factors that affect the incarceration rate of Black persons on petty marijuana possession charges. 
+
+Phenomenon we are investigating: The disparity between the incarceration of Black people to that of White people on petty marijuana possession charges. 
+
+Context: Marijuana possession arrests make up the largest portion of total drug arrests in the US. Of those arrested for marijuana possession, Black men make up the largest portion of perpetrators. Though Black people and White people consume marijuana at similar rates, Black peoplpe are punished for marijuana usage at a significantly higher rate than their white counterparts. We'd like to examine and interpret the significant indicators for changes in the rate of incarceration (by state) for marijuana possession arrests amongst Black and White individuals. As marijuana continues to become more popular amongst middle and upper class America, it is important to understand why this shift is occurring, and why there remains a large portion of Black Americans imprisoned on petty marijuana possesssion charges. 
+
+
+
