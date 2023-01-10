@@ -4,6 +4,7 @@ library(readxl)
 library(openxlsx)
 library(tidyverse)
 library(ggplot2)
+library(tidyr)
 
 
 df <- read.xlsx("Marijuana_arrests_data.xlsx")
@@ -23,7 +24,6 @@ df <- read.xlsx("Marijuana_arrests_data.xlsx")
 arrests <- lm(inc_rate ~ status + per_black, data=df)
 summary(arrests) 
 
-library(tidyr)
 
 df %>% gather(name, vals) %>% unique()
 
