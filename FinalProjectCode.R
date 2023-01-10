@@ -6,6 +6,7 @@ library(openxlsx)
 library(tidyverse)
 library(ggplot2)
 library(tidyr)
+library(cluster)
 
 
 df <- read.xlsx("Marijuana_arrests_data.xlsx")
@@ -33,6 +34,11 @@ wssplot <- function(df, nc=15, seed=1234){
 
 wssplot(df.stand, nc=6) 
 
+
+#Also copied:
+clusplot(df.stand, k.means.fit$cluster, main='2D representation of the Cluster solution',
+         color=TRUE, shade=TRUE,
+         labels=2, lines=0)
 
 
 ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
