@@ -1,5 +1,6 @@
 # R file
-
+install.packages('rattle')
+library('rattle')
 library(readxl)
 library(openxlsx)
 library(tidyverse)
@@ -8,6 +9,12 @@ library(tidyr)
 
 
 df <- read.xlsx("Marijuana_arrests_data.xlsx")
+
+#K-means clustering:
+
+df.stand <- scale(df[-1])
+k.means.fit <- kmeans(df.stand, 3)
+k.means.fit$centers
 
 ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
   geom_line()
