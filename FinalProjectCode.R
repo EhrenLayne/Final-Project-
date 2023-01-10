@@ -22,6 +22,17 @@ k.means.fit$cluster
 #Cluster sizes:
 k.means.fit$size
 
+#Copied from internet:
+wssplot <- function(df, nc=15, seed=1234){
+  wss <- (nrow(df)-1)*sum(apply(df,2,var))
+  for (i in 2:nc){
+    set.seed(seed)
+    wss[i] <- sum(kmeans(df, centers=i)$withinss)}
+  plot(1:nc, wss, type="b", xlab="Number of Clusters",
+       ylab="Within groups sum of squares")}
+
+wssplot(df.stand, nc=6) 
+
 
 
 ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
