@@ -14,7 +14,15 @@ df <- read.xlsx("Marijuana_arrests_data.xlsx")
 
 df.stand <- scale(df[-1])
 k.means.fit <- kmeans(df.stand, 3)
-k.means.fit$centers
+
+#Centroids:
+k.means.fit$centers #Centroids:
+#Clusters:
+k.means.fit$cluster 
+#Cluster sizes:
+k.means.fit$size
+
+
 
 ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
   geom_line()
