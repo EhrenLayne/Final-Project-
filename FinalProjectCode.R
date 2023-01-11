@@ -6,6 +6,7 @@ library(ggplot2)
 library(tidyr)
 library(cluster)
 library(dplyr)
+data(iris)
 
 df <- read.xlsx("weed_data.xlsx")
 df <- subset (df, select = -Illegal)
@@ -37,14 +38,20 @@ clusplot(df.stand, k.means.fit$cluster, main='2D representation of the Cluster s
          color=TRUE, shade=TRUE,
          labels=2, lines=0)
 
-ggplot(df, aes(x=Police_Expend, y= Black_Inc_Rate, fill=Police_Expend)) +  
+Line <- ggplot(df, aes(x=Police_Expend, y= Black_Inc_Rate, fill=Police_Expend)) +  
   geom_line()
+Line <- Line + labs(title = "Line plot of the black incarceration rate vs. police expenditure in each state")
+Line
 
-ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate, fill=Per_Black)) +  
+Scatter <- ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate, fill=Per_Black)) +  
   geom_point()
+Scatter <- Scatter + labs(title = "Scatter plot of the black incarceration rate vs. police expenditure in each state")
+Scatter
 
 head(df)
 summary(df)
 
 arrests <- lm(Black_Inc_Rate ~ Status + Per_Black, data=df)
 summary(arrests) 
+
+data(iris)
