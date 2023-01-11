@@ -8,7 +8,7 @@ library(tidyr)
 library(cluster)
 
 
-df <- read.xlsx("Marijuana_arrests_data.xlsx")
+df <- read.xlsx("weed_data.xlsx")
 
 #K-means clustering:
 
