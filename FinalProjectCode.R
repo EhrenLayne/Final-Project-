@@ -1,5 +1,4 @@
 # R file
-install.packages('rattle')
 library('rattle')
 library(readxl)
 library(openxlsx)
@@ -60,3 +59,7 @@ df <- subset (df, select = -illegal)
 df <- subset (df, select = -medicinal)
 
 head(df)
+
+
+
+
