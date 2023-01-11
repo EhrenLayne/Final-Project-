@@ -5,7 +5,7 @@ Data Links:
 
 Decriminalization status - https://disa.com/maps/marijuana-legality-by-state
 
-Incarceration rate - https://www.sentencingproject.org/research/us-criminal-justice-data/
+Incarceration rate - https://www.sentencingproject.org/research/us-criminal-justice-data/, https://www.sentencingproject.org/app/uploads/2022/10/The-Color-of-Justice-Racial-and-Ethnic-Disparity-in-State-Prisons-2016.pdf
 
 Crime statistics by type - https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/arrest
 
@@ -24,6 +24,7 @@ https://www.aclu.org/sites/default/files/assets/100413-mj-report-rfs-rel1.pdf
 https://www.moneygeek.com/living/state-policing-corrections-spending/
 
 https://www.cato.org/tax-budget-bulletin/budgetary-effects-ending-drug-prohibition
+
 
 Notes on Miron article:
 
