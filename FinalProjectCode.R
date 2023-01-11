@@ -1,14 +1,15 @@
 # R file
-library('rattle')
 library(readxl)
 library(openxlsx)
 library(tidyverse)
 library(ggplot2)
 library(tidyr)
 library(cluster)
-
+library(dplyr)
 
 df <- read.xlsx("weed_data.xlsx")
+df <- subset (df, select = -Illegal)
+df <- subset (df, select = -Medicinal)
 
 #K-means clustering:
 
@@ -16,7 +17,7 @@ df.stand <- scale(df[-1])
 k.means.fit <- kmeans(df.stand, 3)
 
 #Centroids:
-k.means.fit$centers #Centroids:
+k.means.fit$centers
 #Clusters:
 k.means.fit$cluster 
 #Cluster sizes:
@@ -36,30 +37,14 @@ clusplot(df.stand, k.means.fit$cluster, main='2D representation of the Cluster s
          color=TRUE, shade=TRUE,
          labels=2, lines=0)
 
-
-ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
+ggplot(df, aes(x=Police_Expend, y= Black_Inc_Rate, fill=Police_Expend)) +  
   geom_line()
 
-ggplot(df, aes(x=inc_rate, y= per_black, fill=inc_rate)) +  
+ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate, fill=Per_Black)) +  
   geom_point()
 
 head(df)
-glimpse(df)
 summary(df)
 
-df <- read.xlsx("Marijuana_arrests_data.xlsx")
-
-arrests <- lm(inc_rate ~ status + per_black, data=df)
+arrests <- lm(Black_Inc_Rate ~ Status + Per_Black, data=df)
 summary(arrests) 
-
-
-df %>% gather(name, vals) %>% unique()
-
-df <- subset (df, select = -illegal)
-df <- subset (df, select = -medicinal)
-
-head(df)
-
-
-
-
