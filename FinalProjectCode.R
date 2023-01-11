@@ -23,7 +23,6 @@ k.means.fit$cluster
 #Cluster sizes:
 k.means.fit$size
 
-#Copied from internet:
 wssplot <- function(df, nc=15, seed=1234){
   wss <- (nrow(df)-1)*sum(apply(df,2,var))
   for (i in 2:nc){
@@ -34,8 +33,6 @@ wssplot <- function(df, nc=15, seed=1234){
 
 wssplot(df.stand, nc=6) 
 
-
-#Also copied:
 clusplot(df.stand, k.means.fit$cluster, main='2D representation of the Cluster solution',
          color=TRUE, shade=TRUE,
          labels=2, lines=0)
