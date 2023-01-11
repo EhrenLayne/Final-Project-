@@ -23,7 +23,20 @@ https://www.aclu.org/sites/default/files/assets/100413-mj-report-rfs-rel1.pdf
 
 https://www.moneygeek.com/living/state-policing-corrections-spending/
 
+https://www.cato.org/tax-budget-bulletin/budgetary-effects-ending-drug-prohibition
 
+Notes on Miron article:
+
+  Article Purpose: examining the fiscal effects of drug liberalization 
+  
+  Article Message: drug legalization (or liberalization) can reduce government spending, and generate tax revenue that transfers income from drug producers and consumers to public coffers.
+  
+  Article Findings:
+    
+    State and local governments spend $29 billion on drug prohibition annually 
+    
+    Federal government spends an additional $18 billion 
+    
 Variables: 
 
 Criminalized/Decriminalized - Status
@@ -34,8 +47,6 @@ Illegal (Yes, No) - Illegal
 
 Per_black - % of a states population that is Black 
 
-**Income levels - Average income for Black households in each state 
-
 **State expenditure attributable to marijuana prohabition
 
 Question: What are the factors that perpetuate the incarceration of Black men on marijuana possession charges?
@@ -44,14 +55,18 @@ Purpose: To examine the factors that affect the incarceration rate of Black pers
 
 Phenomenon we are investigating: The disparity between the incarceration of Black people to that of White people on petty marijuana possession charges. 
 
-Context: Marijuana possession arrests make up the largest portion of total drug arrests in the US. Of those arrested for marijuana possession, Black men make up the largest portion of perpetrators. Though Black people and White people consume marijuana at similar rates, Black peoplpe are punished for marijuana usage at a significantly higher rate than their white counterparts. We'd like to examine and interpret the significant indicators for changes in the rate of incarceration (by state) for marijuana possession arrests amongst Black and White individuals. As marijuana continues to become more popular amongst middle and upper class America, it is important to understand why this shift is occurring, and why there remains a large portion of Black Americans imprisoned on petty marijuana possesssion charges. 
+Context: Marijuana possession arrests make up the largest portion of total drug arrests in the US. Of those arrested for marijuana possession, Black men make up the largest portion of perpetrators. Though Black people and White people consume marijuana at similar rates, Black people are punished for marijuana usage at a significantly higher rate than their white counterparts. We'd like to examine and interpret the significant indicators for changes in the rate of incarceration (by state) for marijuana possession arrests amongst Black and White individuals. We theorize that the status of marijuana criminalization in a state  and a state's expenditure on marijuna prohibition are the most significant indicators when examining disparities in incarceration rates among states. We hope to prove that these disparities not only predict differences in the rate of incaceration (for petty marijuana charges) between states, but validate the claim that Black persons are more likely to be arrested on petty marijuana charges. 
 
-Tasks: 1/8/23
+  Citations in Context:
+    
+    Edwards, Ezekiel et al (2013) - This ACLU report provides the first comprehensive examination of marijuana possession arrests by race for all 50 states, and their respective counties between 2001 and 2010. This ACLU report provides context for the current state of marijuana violation enforcement by briefly outlining the history of marijuana prohibition and “War on Drugs” era policy. Though the data in this report is dated, the methods used by the researchers to investigate the disparities in marijuana possession arrests inspired how we examined the same phenomenon. 
+    
+    Bender, Steven (2016) - Steven Bender discusses the life cycle of U.S. marijuana prohibition, and the intersections between recent legalization and user consequences for people of color. Bender outlines how the racialized enforcement of marijuana prohibition laws unfairly targeted persons of color, even when POC communities and White people smoke cannabis at relatively similar rates. The expenditure data we gathered is from 2016, and Bender's discussion of the state of marijuana prohibition 6 years ago provides good context for understanding the impact of state spending. Moreover, Bender discusses the differences between types of marijuana legalization, explaining that legalization is not actualized in the same way in every state. He instead highlights these differences and encourages state legislators to consider different types of legalization, so to reduce current racial disparities in incarceration. 
+    
+    Zika, Mira et al (2022) - A group of researchers from the University of Sussex, University of Cambridge, Carnegie Mellon University, and the Alan Turing Institute analyzed the racial disparities in the enforcement of marijuana violations in the U.S. The researchers investigated whether marijuana usage and purchasing behaviors could explain the racial composition of offenders. They found that racial disparities in marijuna-violation enforcement increased after legalization, and that this could be explained by an enforcement focus on the visibility of marijuana usage rather than the legality of said usage. The researcher's discussion on the enforcement mechanisms which dictate how POC are arrested on marijuana possession charges adds interesting context for our discussion on expenditure. The researchers claim that the police spend siginficant funds on various methods and resources for enforcing drug prohibition (mariuna prohibition as a subset), and so police behavior can best be  explained by the funds that are allocated towards enforcement. We then surmise that state funding towards marijuna prohibition is a significant indicator for not only police behavior, but for the incarceration of POC. 
 
-Will: look for new expenditure data; add data to CVS/XL; try to push 
 
-Jordan: Clustering; push changes to head of branch; fix github code; 
+Recommendations and Limitations (Data and Methods): For those hoping to replicate the models we've created, and continue our research on racial disparities in marijuana prohibition, we'd recommend greater consideration for differences in marijuana jurisprudence. We focused our study on decriminalization, but "decriminalization" is a blanket term for a various enforcement methods states may consider when determining the state of marijuana legislation. Because decriminalization is not uniform across the nation, we'd recommend other researchers cluster decriminalization into proper subgroups by similarities. For example: Boston, New York, and New Jersey have all recently  (within the past decade) legalized or decriminalization marijuana. Due to proximinity, shared cultures and economics, and relatively fluid political relationships, all three states have implemented similar forms of legalization. However, these forms are starkly different from Colorado's legalization of marijuana, which is more liberal and does not harshly punish marijuana users or sellers. Had we clustered the different types of marijuana legalization by similarity, then we could have told a more comprehensive story about how marijuana decrminalization impacts racial disparities in incarceration. 
 
-Ehren: try to push; continue writing context and introduction section 
 
 
