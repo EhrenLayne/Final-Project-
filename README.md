@@ -112,6 +112,17 @@ fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`
 summary(fit)
 
 
+library(coefplot)
+coefplot()
+
+hist(glm_out$fitted.values)
+
+predict()
+  - For predictions, we can run the predictions for every state (Status variable as our input, incarceration as our outcome), and plot those predictions on a scatter plot 
+
+
+
+
 
 
 
