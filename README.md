@@ -91,10 +91,10 @@ Changes to original code:
 t.test(df$Black_Inc_Rate, df$White_Inc_Rate, correct=FALSE)
 
 # Logit Regression
-fit <- glm(Status~Black_Inc_Rate~+Per_Black+Police_Expend,data=df,family=binomial())
+fit <- glm(Status~Black_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial())
 summary(fit) 
 
-fit <- glm(Status~White_Inc_Rate+Per_Black+Police_Expend, data=df,family=binomial())
+fit <- glm(Status~White_Inc_Rate+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial())
 summary(fit) 
 
 # Poisson Regression:
