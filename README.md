@@ -73,25 +73,9 @@ Recommendations and Limitations (Data and Methods): For those hoping to replicat
 
 Scatter Plots for (Black incarceration rate vs. )
 
-Line2 <- ggplot(df, aes(x=Possession_Expend, y= Black_Inc_Rate, fill=Possession_Expend)) +  
-  geom_line()
-Line2 <- Line2 + labs(title = "Line plot of the black incarceration rate vs. possesion arrest expenditure in each state")
-
-Line2
-
-
-Line3 <- ggplot(df, aes(x=Weed_Prohibition_Bil$, y= Black_Inc_Rate, fill=Weed_Prohibition_Bil$)) +  
-  geom_line()
-Line3 <- Line3 + labs(title = "Line plot of the black incarceration rate vs. weed prohibition expenditure in each state")
-
-Line3
-
-
-Line4 <- ggplot(df, aes(x=Per_black, y= Black_Inc_Rate, fill=Per_black)) +  
-  geom_line()
-Line4 <- Line4 + labs(title = "Line plot of the black incarceration rate vs. the percentage of Black residents in each state")
-
-Line4
+Scatter2 <- ggplot(df, aes(x=Per_Black, y=Weed_Prohibition_Bil$),color = class) +
+  geom_point()
+Scatter2 <- Scatter2 + labs(title = "Scatter plot of the percentage of population that is black vs. Weed prohibition expenditure")
 
 Other Comparisons to Consider:
 
