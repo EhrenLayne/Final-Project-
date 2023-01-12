@@ -23,11 +23,7 @@ df <- subset (df, select = -Sales_Expend)
 df <- subset (df, select = -Sales_Arrests)
 df <- subset (df, select = -Judicial_Expend)
 df <- subset (df, select = -Corrections_Expend)
-head(df)
-WhiteIncRate = df[,2]
-print(WhiteIncRate)
-BlackIncRate = df[,3]
-print(BlackIncRate)
+
 
 # Line Plot of police expenditure vs. the black incarceration rate
 Line <- ggplot(df, aes(x=Police_Expend, y= Black_Inc_Rate, fill=Police_Expend)) +  
