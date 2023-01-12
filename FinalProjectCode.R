@@ -146,6 +146,6 @@ par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
 plot(df$Age[df$Per_Black==0],df$Police_Expend[df$Per_Black==0],
      pch=19,col="yellow",
      xlim=range(df$Black_Inc_Rate),ylim=range(df$Police_Expend),
-     xlab="Age (Menapausal in Red)",ylab="Police_Expend(g/dl)")
+     xlab="Black population percentage",ylab="Police_Expend(g/dl)")
 points(df$Black_Inc_Rate[df$Per_Black==1],df$Police_Expend[df$Per_Black==1],
        pch=19,col="red")
