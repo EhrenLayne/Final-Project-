@@ -76,17 +76,8 @@ WhitevsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= White_Inc_Rate, fill=Sta
 WhitevsPoliceExp1 <- WhitevsPoliceExp1 + labs(title = "Line plot of the white incarceration rate vs. police expenditure")
 WhitevsPoliceExp1
 
-# Poisson Regression:
-fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate+Police_Expend,data=df,family=poisson())
-summary(fit)
-# Binomial Regression:
-fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=binomial())
-summary(fit)
-# Quasibinomial Regression:
-fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=quasibinomial())
-summary(fit)
 # t, p-value, 95% confidence interval:
-t.test(table(df$Black_Inc_Rate, df$White_Inc_Rate), correct=FALSE)
+t.test(df$Black_Inc_Rate, df$White_Inc_Rate, correct=FALSE)
 
 df <- na.omit(df)
 
@@ -94,3 +85,26 @@ head(df)
 
 ggplot(df, aes(x = Status, y = Per_Black, fill="Black_Inc_Rate")) + 
   geom_col(fill = "#0099f9", width =0.5)
+
+
+# Logit regression:
+fit <- glm(Status~Black_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial()) 
+summary(fit)
+
+fit <- glm(Status~White_Inc_Rate+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial()) 
+summary(fit)
+
+# Poisson Regression;
+
+fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson()) 
+summary(fit)
+
+fit <- glm(White_Inc_Rate~Status+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson()) 
+summary(fit)
+
+# Quasibinomial Regression:
+fit <- glm(Status~Black_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial()) 
+summary(fit)
+
+fit <- glm(Status~White_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial()) 
+summary(fit)
