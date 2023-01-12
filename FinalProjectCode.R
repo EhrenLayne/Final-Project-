@@ -56,11 +56,13 @@ Scatter <- ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate, fill=Per_Black)) +
 Scatter <- Scatter + labs(title = "Scatter plot of the black incarceration rate vs. police expenditure in each state")
 Scatter
 
-head(df)
 summary(df)
 
-arrests <- lm(Black_Inc_Rate ~ Status + Per_Black, data=df)
+arrests <- lm(Black_Inc_Rate ~ Police_Expend + Per_Black, data=df)
 summary(arrests) 
-
+# Residual Plot:
 res <- resid(arrests)
 plot(fitted(arrests), res)
+abline(0,0)
+
+#
