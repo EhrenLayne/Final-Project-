@@ -71,5 +71,15 @@ Theory and Hypothesis: The purposes of our study is to examine the significant i
 
 Recommendations and Limitations (Data and Methods): For those hoping to replicate the models we've created, and continue our research on racial disparities in marijuana prohibition, we'd recommend greater consideration for differences in marijuana jurisprudence. We focused our study on decriminalization, but "decriminalization" is a blanket term for various enforcement methods states may consider when determining the status of marijuana legalization. Because decriminalization is not uniform across the nation, we'd recommend other researchers to cluster decriminalization (unpack the binary we created) into proper subgroups by similarities. For example: Boston, New York, and New Jersey have all recently  (within the past decade) legalized or decriminalized marijuana. Due to proximity, shared cultures and economics, and relatively fluid political relationships, all three states have implemented similar forms of legalization. However, these forms are starkly different from Colorado's legalization of marijuana, which is more liberal and does not harshly penalize marijuana users or sellers. Even though a state like New Jersey has legalized marijuana, marijuana users in the state are at greater threat of incarceration for their use compared to a marijuana user in Colorado. Had we clustered the different types of marijuana legalization by similarity, then we could have told a more comprehensive story about how marijuana decrminalization impacts racial disparities in incarceration. 
 
+Scatter Plots for (Black incarceration rate vs. )
 
+Line2 <- ggplot(df, aes(x=Possession_Expend, y= Black_Inc_Rate, fill=Possession_Expend)) +  
+  geom_line()
+Line2 <- Line2 + labs(title = "Line plot of the black incarceration rate vs. possesion arrest expenditure in each state")
+Line2
+
+Line3 <- ggplot(df, aes(x=Weed_Prohibition_Bil$, y= Black_Inc_Rate, fill=Weed_Prohibition_Bil$)) +  
+  geom_line()
+Line3 <- Line3 + labs(title = "Line plot of the black incarceration rate vs. weed prohibition expenditure in each state")
+Line3
 
