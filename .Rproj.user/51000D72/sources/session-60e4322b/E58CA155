@@ -3,7 +3,7 @@
     "path": "~/Documents/Final-Proj/FinalProjectCode.R",
     "project_path": "FinalProjectCode.R",
     "type": "r_source",
-    "hash": "2690501650",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1673367233158.0,
@@ -12,17 +12,17 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "25,0",
-        "scrollLine": "1",
+        "cursorPosition": "60,28",
+        "scrollLine": "13",
         "docOutlineVisible": "0",
         "ignored_words": "Centroids\n"
     },
     "folds": "",
-    "lastKnownWriteTime": 1673495134,
+    "lastKnownWriteTime": 1673495839,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1673495134895,
+    "last_content_update": 1673495839209,
     "read_only": false,
     "read_only_alternatives": []
 }

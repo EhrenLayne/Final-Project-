@@ -59,13 +59,13 @@ box_plot +
   geom_boxplot()
 
 # Line plot of police expenditure against the black incarceration rates
-BlackvsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= BlackIncRate, fill=States, group = 1)) +  
+BlackvsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= Black_Inc_Rate, fill=States, group = 1)) +  
   geom_line()
 BlackvsPoliceExp1 <- BlackvsPoliceExp1 + labs(title = "Line plot of the black incarceration rate vs. police expenditure")
 BlackvsPoliceExp1
 
 # Line plot of police expenditure against the white incarceration rates
-WhitevsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= WhiteIncRate, fill=States, group = 1)) +  
+WhitevsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= White_Inc_Rate, fill=States, group = 1)) +  
   geom_line()
 WhitevsPoliceExp1 <- WhitevsPoliceExp1 + labs(title = "Line plot of the white incarceration rate vs. police expenditure")
 WhitevsPoliceExp1
