@@ -123,16 +123,3 @@ abline(h=c(0,1),col="yellow")
 x <- seq(from=min(xbeta),to=max(xbeta),length=100)
 points(xbeta,df$Black_Inc_Rate,col="black",pch=19)
 lines(xbeta,logit(xbeta),col="black")
-
-
-# Scatterplot:
-par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
-    col.sub="white", col="white",bg="slategray", cex.lab=1.3)
-plot(df$Age[df$Per_Black==0],df$Police_Expend[df$Per_Black==0],
-     pch=19,col="yellow",
-     xlim=range(df$Black_Inc_Rate),ylim=range(df$Police_Expend),
-     xlab="Black population percentage",ylab="Police_Expend(g/dl)")
-points(df$Black_Inc_Rate[df$Per_Black==1],df$Police_Expend[df$Per_Black==1],
-       pch=19,col="red")
-
-class(df$States)
