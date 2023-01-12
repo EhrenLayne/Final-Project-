@@ -53,7 +53,7 @@ Line
 
 Scatter <- ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate, fill=Per_Black)) +  
   geom_point()
-Scatter <- Scatter + labs(title = "Scatter plot of the black incarceration rate vs. police expenditure in each state")
+Scatter <- Scatter + labs(title = "Scatter plot of the black incarceration rate vs. Percent of the population that is black")
 Scatter
 
 summary(df)
@@ -65,4 +65,10 @@ res <- resid(arrests)
 plot(fitted(arrests), res)
 abline(0,0)
 
-#
+# Box Plot:
+box_plot <- ggplot(df, aes(x = Police_Expend, y = States))
+box_plot +
+  geom_boxplot()
+
+
+
