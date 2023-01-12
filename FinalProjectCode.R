@@ -1,5 +1,4 @@
 # R file
-install.packages("ggmcmc")
 library(readxl)
 library(openxlsx)
 library(tidyverse)
@@ -13,8 +12,8 @@ library(shinystan)
 library(bayesplot)
 library(tidybayes)
 library(ggmcmc)
-
-
+library(faraway)
+library(MASS)
 data(iris)
 
 df <- read.xlsx("weed_data.xlsx")
@@ -25,7 +24,6 @@ df <- subset (df, select = -Sales_Arrests)
 df <- subset (df, select = -Judicial_Expend)
 df <- subset (df, select = -Corrections_Expend)
 head(df)
-
 WhiteIncRate = df[,2]
 print(WhiteIncRate)
 BlackIncRate = df[,3]
@@ -65,7 +63,20 @@ box_plot +
   geom_boxplot()
 
 # Line plot of police expenditure against the black incarceration rates
-BlackvsPoliceExp <- ggplot(df, aes(x=Police_Expend, y= WhiteIncRate, fill=States, group = 1)) +  
+BlackvsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= BlackIncRate, fill=States, group = 1)) +  
   geom_line()
-BlackvsPoliceExp
+BlackvsPoliceExp1 <- BlackvsPoliceExp1 + labs(title = "Line plot of the black incarceration rate vs. police expenditure")
+BlackvsPoliceExp1
 
+# Line plot of police expenditure against the white incarceration rates
+WhitevsPoliceExp1 <- ggplot(df, aes(x=Police_Expend, y= WhiteIncRate, fill=States, group = 1)) +  
+  geom_line()
+WhitevsPoliceExp1 <- WhitevsPoliceExp1 + labs(title = "Line plot of the white incarceration rate vs. police expenditure")
+WhitevsPoliceExp1
+
+# Poisson Regression:
+fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=poisson())
+summary(fit)
+# Binomial Regression:
+fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=binomial())
+summary(fit)
