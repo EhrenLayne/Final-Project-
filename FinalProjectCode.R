@@ -76,3 +76,6 @@ summary(fit)
 # Binomial Regression:
 fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=quasibinomial())
 summary(fit)
+
+# t, p-value, 95% confidence interval:
+t.test(table(df$Black_Inc_Rate, df$White_Inc_Rate), correct=FALSE)
