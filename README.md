@@ -105,10 +105,10 @@ fit <- glm(White_Inc_Rate~Status+Police_Expend+`Weed_Prohibition_Bil$`+Possessio
 summary(fit)
 
 # Binomial Regression:
-fit <- glm(White_Inc_Rate~Status+Police_Expend,data=df,family=quasibinomial())
+fit <- glm(White_Inc_Rate~Status+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=quasibinomial())
 summary(fit)
 
-fit <- glm(Black_Inc_Rate~Status+Per_Black,data=df,family=quasibinomial())
+fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial())
 summary(fit)
 
 
