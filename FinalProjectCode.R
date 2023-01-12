@@ -11,6 +11,14 @@ data(iris)
 df <- read.xlsx("weed_data.xlsx")
 df <- subset (df, select = -Illegal)
 df <- subset (df, select = -Medicinal)
+df <- subset (df, select = -Sales_Expend)
+df <- subset (df, select = -Sales_Arrests)
+df <- subset (df, select = -Judicial_Expend)
+df <- subset (df, select = -Corrects_Expend)
+
+
+head(df)
+
 
 #K-means clustering:
 
@@ -54,4 +62,5 @@ summary(df)
 arrests <- lm(Black_Inc_Rate ~ Status + Per_Black, data=df)
 summary(arrests) 
 
-data(iris)
+res <- resid(arrests)
+plot(fitted(arrests), res)
