@@ -85,5 +85,34 @@ Status vs. expenditure variables
 
 Linear model: inc_rate vs status, per_black, expenditure variables 
 
+Changes to original code:
+
+# t, p-value, 95% confidence interval:
+t.test(df$Black_Inc_Rate, df$White_Inc_Rate, correct=FALSE)
+
+# Logit Regression
+fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend,data=df,family=binomial())
+summary(fit) 
+
+fit <- glm(White_Inc_Rate~Status+Per_Black+Police_Expend, data=df, family=binomial())
+summary(fit) 
+
+# Poisson Regression:
+fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson())
+summary(fit)
+
+fit <- glm(White_Inc_Rate~Status+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson())
+summary(fit)
+
+# Binomial Regression:
+fit <- glm(White_Inc_Rate~Status+Police_Expend,data=df,family=quasibinomial())
+summary(fit)
+
+fit <- glm(Black_Inc_Rate~Status+Per_Black,data=df,family=quasibinomial())
+summary(fit)
+
+
+
+
 
 
