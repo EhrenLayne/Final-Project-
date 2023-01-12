@@ -93,7 +93,13 @@ Line4 <- Line4 + labs(title = "Line plot of the black incarceration rate vs. the
 
 Line4
 
+Other Comparisons to Consider:
 
+White incarceration rate vs. expenditure variables 
+
+Status vs. expenditure variables 
+
+Linear model: inc_rate vs status, per_black, expenditure variables 
 
 
 
