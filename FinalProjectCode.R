@@ -15,7 +15,7 @@ library(ggmcmc)
 library(faraway)
 library(MASS)
 library(gridExtra)
-
+library(coefplot)
 data(iris)
 
 df <- read.xlsx("weed_data.xlsx")
@@ -25,8 +25,7 @@ df <- subset (df, select = -Sales_Expend)
 df <- subset (df, select = -Sales_Arrests)
 df <- subset (df, select = -Judicial_Expend)
 df <- subset (df, select = -Corrections_Expend)
-
-
+dfmat <- as.matrix(df)
 
 
 # Line Plot of police expenditure vs. the black incarceration rate
@@ -108,3 +107,45 @@ summary(fit)
 
 fit <- glm(Status~White_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial()) 
 summary(fit)
+
+
+inv.logit <- function(mu)  log(mu/(1-mu))
+logit <- function(Xb)  1/(1+exp(-Xb))
+ana.logit <- glm(Per_Black ~ Black_Inc_Rate, data=df, family=binomial(link=logit))
+par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
+    col.sub="white",col="white",bg="slategray",
+    cex.lab=1.3,oma=c(4,2,2,2))
+xbeta <- as.matrix(cbind(rep(1,length=nrow(df)),df$Per_Black)) %*% 
+  coef(ana.logit)
+plot(range(xbeta),c(-0.1,1.1),type="n",xlab="Black percentage of population by state",
+     ylab="Black Incarceration Rate")
+abline(h=c(0,1),col="yellow")
+x <- seq(from=min(xbeta),to=max(xbeta),length=100)
+points(xbeta,df$Black_Inc_Rate,col="black",pch=19)
+lines(xbeta,logit(xbeta),col="black")
+
+
+inv.logit <- function(mu)  log(mu/(1-mu))
+logit <- function(Xb)  1/(1+exp(-Xb))
+ana.logit <- glm(Per_Black ~ White_Inc_Rate, data=df, family=binomial(link=logit))
+par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
+    col.sub="white",col="white",bg="slategray",
+    cex.lab=1.3,oma=c(4,2,2,2))
+xbeta <- as.matrix(cbind(rep(1,length=nrow(df)),df$Per_Black)) %*% 
+  coef(ana.logit)
+plot(range(xbeta),c(-0.1,1.1),type="n",xlab="Black percentage of population by state",
+     ylab="White incarceration rate")
+abline(h=c(0,1),col="yellow")
+x <- seq(from=min(xbeta),to=max(xbeta),length=100)
+points(xbeta,df$Black_Inc_Rate,col="black",pch=19)
+lines(xbeta,logit(xbeta),col="black")
+
+
+par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
+    col.sub="white", col="white",bg="slategray", cex.lab=1.3)
+plot(df$Age[df$Per_Black==0],df$Police_Expend[df$Per_Black==0],
+     pch=19,col="yellow",
+     xlim=range(df$Black_Inc_Rate),ylim=range(df$Police_Expend),
+     xlab="Age (Menapausal in Red)",ylab="Police_Expend(g/dl)")
+points(df$Black_Inc_Rate[df$Per_Black==1],df$Police_Expend[df$Per_Black==1],
+       pch=19,col="red")
