@@ -71,8 +71,8 @@ WhitevsPoliceExp1 <- WhitevsPoliceExp1 + labs(title = "Line plot of the white in
 WhitevsPoliceExp1
 
 # Poisson Regression:
-fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=poisson())
+fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate+Police_Expend,data=df,family=poisson())
 summary(fit)
 # Binomial Regression:
-fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=binomial())
+fit <- glm(Per_Black~White_Inc_Rate+Black_Inc_Rate,data=df,family=quasibinomial())
 summary(fit)
