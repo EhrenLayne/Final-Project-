@@ -1,20 +1,10 @@
 # R file
-library(readxl)
 library(openxlsx)
 library(tidyverse)
-library(ggplot2)
 library(tidyr)
 library(cluster)
 library(dplyr)
-library(brms)
-library(ggridges)
-library(shinystan)
-library(bayesplot)
-library(tidybayes)
-library(ggmcmc)
-library(faraway)
-library(MASS)
-library(gridExtra)
+
 library(coefplot)
 data(iris)
 
@@ -144,3 +134,5 @@ plot(df$Age[df$Per_Black==0],df$Police_Expend[df$Per_Black==0],
      xlab="Black population percentage",ylab="Police_Expend(g/dl)")
 points(df$Black_Inc_Rate[df$Per_Black==1],df$Police_Expend[df$Per_Black==1],
        pch=19,col="red")
+
+class(df$States)
