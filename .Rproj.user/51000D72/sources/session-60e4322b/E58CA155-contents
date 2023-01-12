@@ -14,6 +14,8 @@ library(tidybayes)
 library(ggmcmc)
 library(faraway)
 library(MASS)
+library(gridExtra)
+
 data(iris)
 
 df <- read.xlsx("weed_data.xlsx")
@@ -23,6 +25,8 @@ df <- subset (df, select = -Sales_Expend)
 df <- subset (df, select = -Sales_Arrests)
 df <- subset (df, select = -Judicial_Expend)
 df <- subset (df, select = -Corrections_Expend)
+
+
 
 
 # Line Plot of police expenditure vs. the black incarceration rate
@@ -39,7 +43,9 @@ Line
 
 # Scatter Plot:
 Scatter <- ggplot(df, aes(x=Per_Black, y= Black_Inc_Rate),color = class) +  
-  geom_point()
+  geom_point() +
+  geom_smooth(method=lm, se=FALSE, linetype='dashed')
+
 Scatter <- Scatter + labs(title = "Scatter plot of the black incarceration rate vs. percent of the population that is black")
 Scatter
 
@@ -79,3 +85,7 @@ summary(fit)
 
 # t, p-value, 95% confidence interval:
 t.test(table(df$Black_Inc_Rate, df$White_Inc_Rate), correct=FALSE)
+
+df <- na.omit(df)
+
+head(df)
