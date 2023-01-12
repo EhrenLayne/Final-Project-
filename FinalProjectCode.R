@@ -79,9 +79,6 @@ WhitevsPoliceExp1
 t.test(df$Black_Inc_Rate, df$White_Inc_Rate, correct=FALSE)
 
 df <- na.omit(df)
-
-head(df)
-
 ggplot(df, aes(x = Status, y = Per_Black, fill="Black_Inc_Rate")) + 
   geom_col(fill = "#0099f9", width =0.5)
 
@@ -89,7 +86,6 @@ ggplot(df, aes(x = Status, y = Per_Black, fill="Black_Inc_Rate")) +
 # Logit regression:
 fit <- glm(Status~Black_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial()) 
 summary(fit)
-
 fit <- glm(Status~White_Inc_Rate+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=binomial()) 
 summary(fit)
 
@@ -97,14 +93,12 @@ summary(fit)
 
 fit <- glm(Black_Inc_Rate~Status+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson()) 
 summary(fit)
-
 fit <- glm(White_Inc_Rate~Status+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,data=df,family=poisson()) 
 summary(fit)
 
 # Quasibinomial Regression:
 fit <- glm(Status~Black_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial()) 
 summary(fit)
-
 fit <- glm(Status~White_Inc_Rate+Per_Black+Police_Expend+`Weed_Prohibition_Bil$`+Possession_Expend,,data=df,family=quasibinomial()) 
 summary(fit)
 
@@ -141,6 +135,7 @@ points(xbeta,df$Black_Inc_Rate,col="black",pch=19)
 lines(xbeta,logit(xbeta),col="black")
 
 
+# Scatterplot:
 par(mfrow=c(1,1),mar=c(5,5,2,2),lwd=2,col.axis="white",col.lab="white",
     col.sub="white", col="white",bg="slategray", cex.lab=1.3)
 plot(df$Age[df$Per_Black==0],df$Police_Expend[df$Per_Black==0],
